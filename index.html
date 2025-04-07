@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Сортування масивів</title>
+  <meta charset="UTF-8">
+  <title>Демонстрація сортування</title>
   <style>
-    body { font-family: sans-serif; padding: 1rem; }
-    button { margin: 0.5rem 0; }
-    pre { background: #f0f0f0; padding: 1rem; overflow-x: auto; }
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .result-block { border: 1px solid #ccc; border-radius: 5px; margin-bottom: 20px; padding: 10px; }
+    .result-header { cursor: pointer; background: #f4f4f4; padding: 10px; border-radius: 3px; }
+    .result-content { display: none; padding: 10px; }
+    .btn { padding: 10px 15px; margin: 5px; border: none; border-radius: 3px; background-color: #4CAF50; color: white; cursor: pointer; }
+    .btn:hover { background-color: #45a049; }
   </style>
 </head>
 <body>
-  <h1>Сортування масивів</h1>
-
-  <button onclick="runSorts(false)">Показати результати для нерозрідженого масиву</button>
-  <button onclick="runSorts(true)">Показати результати для розрідженого масиву</button>
-
+  <h1>Демонстрація роботи бібліотеки сортування</h1>
+  <div>
+    <button class="btn" onclick="runSorts('dense')">Показати результати для нерозрідженого масиву</button>
+    <button class="btn" onclick="runSorts('sparse')">Показати результати для розрідженого масиву</button>
+  </div>
   <div id="results"></div>
 
   <script src="sortLib.js"></script>
